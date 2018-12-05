@@ -37,6 +37,13 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         newUnit.SetActive(true);
         newUnit.GetComponent<UnitController>().manager = this;
         units.Add(newUnit);
+        UnitCounter.count++;
+    }
+
+    public void DestroyUnit(GameObject selected)
+    {
+        units.Remove(selected);
+        Destroy(selected);
     }
 
 }

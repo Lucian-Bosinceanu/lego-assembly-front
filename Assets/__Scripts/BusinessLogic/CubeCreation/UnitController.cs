@@ -5,6 +5,7 @@ using UnityEngine;
 public interface IUnitManagerDelegate {
     void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow);
     void FocusUnit(UnitController unit);
+    void DestroyUnit(GameObject slected);
 }
 
 public class UnitController : MonoBehaviour, ISelectableDelegate {
@@ -24,6 +25,21 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
             GameObject selected = selectable.gameObject;
             manager.DidSelectUnitAndArrow(this, selected);
         }
+    }
+
+    public void LeftSelect(ClickSelectable selectable)
+    {
+        if (manager == null)
+        {
+            print("MANAGER IS NULL");
+            return;
+        }
+        if (selectable == representation.GetComponent<ClickSelectable>())
+        {
+            manager.DestroyUnit(gameObject);
+        }
+        GameObject selected = selectable.gameObject;
+        manager.DestroyUnit(selected);
     }
 
     void Start() {
