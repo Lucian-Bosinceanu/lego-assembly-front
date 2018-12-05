@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.UI;
 
 public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     public GameObject UnitPrefab;
@@ -21,7 +23,15 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     public void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow) {
         Vector3 distance = (unit.representation.transform.position - creationArrow.transform.position) * 2;
         Vector3 newUnitPosition = unit.transform.position - distance;
-        CreateUnit(newUnitPosition);
+        if (UnitCounter.count == UnitCounter.MAX_NUMBER_OF_CUBES)
+        {
+            EditorUtility.DisplayDialog("Cube limit reached", "Cannot add more cubes! " +
+                "The maximum number of cubes permitted is 5000.", "Ok");
+        }
+        else
+        {
+            CreateUnit(newUnitPosition);
+        }
     }
 
     // Use this for initialization
@@ -43,6 +53,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     public void DestroyUnit(GameObject selected)
     {
         units.Remove(selected);
+        UnitCounter.count--;
         Destroy(selected);
     }
 
