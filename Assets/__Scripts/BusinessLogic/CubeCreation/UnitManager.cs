@@ -39,4 +39,10 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         units.Add(newUnit);
     }
 
+    public void DestroyUnit(GameObject selected)
+    {
+        units.Remove(selected);
+        Destroy(selected);
+    }
+
 }
