@@ -37,6 +37,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         newUnit.SetActive(true);
         newUnit.GetComponent<UnitController>().manager = this;
         units.Add(newUnit);
+        UnitCounter.count++;
     }
 
 }
