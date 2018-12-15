@@ -6,3 +6,4 @@
 -Adaugarea in Json a algoritmului selectat
 
 
+ 
