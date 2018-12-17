@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class exportAlgJson : MonoBehaviour
 {
     public string algorithmType; //aici se salveaza tipul algoritmului
 

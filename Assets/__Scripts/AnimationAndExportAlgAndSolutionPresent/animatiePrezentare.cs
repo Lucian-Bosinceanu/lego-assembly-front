@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class animatiePrezentare : MonoBehaviour
 {
+
+    int i;
+    int n;//lngimea vectorului 3
+    public Vector3[] coord = new Vector3[20];
     // Use this for initialization
     IEnumerator Start()
     {
-        int x, y, z;
-        y = 5; z = -5;
+       
         Camera camera = GetComponent<Camera>();
 
-        for (x = -4; x <= 4; x = x + 2)
+        for (i = 0; i < n; i++)
         {
             yield return new WaitForSeconds(2);
-            camera.transform.position = new Vector3(x, y + 1, z - 7);
-            cub(x, y, z);
+            camera.transform.position = new Vector3(coord[i].x, coord[i].y + 1, coord[i].z - 7);
+            cub(coord[i].x, coord[i].y, coord[i].z);
         }
         
     }
 
-    void cub(int x, int y, int z)
+    void cub(float x, float y, float z)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = new Vector3(x, y, z);

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class prezentareSolutie : MonoBehaviour
@@ -11,37 +10,37 @@ public class prezentareSolutie : MonoBehaviour
     /// </summary>
     int ok = 3;
     int speed = 0;
+    int i;
+    int n;//lngimea vectorului 3
+    public Vector3[] coord = new Vector3[20];
     // Use this for initialization
     IEnumerator Start(){
-      
-        int x, y, z;
-        y = 5; z = -5;
-        
-    for (x = -4; x <= 4; x = x + 2)
-    {
-        
-        if(ok==1)
+
+        for (i = 0; i < n; i++)
+        {
+
+            if (ok == 1)
             {
                 speed = 1;
             }
 
-        if(ok==2)
+            if (ok == 2)
             {
                 speed = 2;
             }
 
-        if(ok==3)
+            if (ok == 3)
             {
                 speed = 0;
             }
 
-        yield return new WaitForSeconds(speed);
-        cub(x, y, z);
-    }
-
+            yield return new WaitForSeconds(speed);
+            cub(coord[i].x, coord[i].y, coord[i].z);
+        }
+        
     }
     
-    void cub(int x, int y, int z)
+    void cub(float x, float y, float z)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = new Vector3(x, y, z);
