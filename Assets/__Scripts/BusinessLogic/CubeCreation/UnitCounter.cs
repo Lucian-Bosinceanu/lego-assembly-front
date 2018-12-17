@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class UnitCounter : MonoBehaviour {
 
     public static int count;
+    public const int MAX_NUMBER_OF_CUBES = 10;
     public Text counterText;
 
     private void Start()
     {
-        count = 0;
+        count = 1;
     }
 
     private void Update()

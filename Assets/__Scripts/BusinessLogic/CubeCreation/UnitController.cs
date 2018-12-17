@@ -38,8 +38,11 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         {
             manager.DestroyUnit(gameObject);
         }
-        GameObject selected = selectable.gameObject;
-        manager.DestroyUnit(selected);
+        else
+        {
+            GameObject selected = selectable.gameObject;
+            manager.DestroyUnit(selected);
+        }
     }
 
     void Start() {
