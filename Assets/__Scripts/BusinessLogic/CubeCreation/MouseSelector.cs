@@ -15,7 +15,7 @@ public class MouseSelector : MonoBehaviour {
             {
                 ClickSelectable selectable = hit.transform.gameObject.GetComponent<ClickSelectable>();
                 if (selectable != null) {
-                    selectable.select();
+                    selectable.leftClickSelect();
                 }
             }
         } else if(Input.GetMouseButtonDown(1))
@@ -28,7 +28,7 @@ public class MouseSelector : MonoBehaviour {
                 ClickSelectable selectable = hit.transform.gameObject.GetComponent<ClickSelectable>();
                 if (selectable != null)
                 {
-                    selectable.leftSelect();
+                    selectable.rightClickSelect();
                 }
             }
         }

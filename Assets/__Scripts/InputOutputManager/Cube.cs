@@ -9,7 +9,9 @@ namespace InputOutputManager
     [Serializable]
     class Cube
     {
-        public Vector3 coord;
-        public String name;
+        public int x;
+        public int y;
+        public int z;
+        public String color;
     }
 }
