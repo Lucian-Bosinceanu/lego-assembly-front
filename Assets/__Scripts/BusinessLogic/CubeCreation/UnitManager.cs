@@ -12,6 +12,8 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
 
     public ArrayList units;
 
+    public bool IsFirstCube;
+
     public void FocusUnit(UnitController unit) {
         if (current != null) {
             current.HideArrows();
@@ -37,6 +39,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     // Use this for initialization
     void Start () {
         units = new ArrayList();
+        IsFirstCube = true;
         CreateUnit(Vector3.zero);
 	}
 	
@@ -45,6 +48,15 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         GameObject newUnit = Instantiate(UnitPrefab, SculptureAnchor.transform, true);
         newUnit.transform.position = position;
         newUnit.SetActive(true);
+        if (IsFirstCube)
+        {
+            newUnit.GetComponent<UnitController>().representation.tag = "OriginCube";
+            IsFirstCube = false;
+        }
+        else
+        {
+            newUnit.GetComponent<UnitController>().representation.tag = "Cube";
+        }
         newUnit.GetComponent<UnitController>().manager = this;
         units.Add(newUnit);
         UnitCounter.count++;

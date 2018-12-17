@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Validation;
 
 public interface IUnitManagerDelegate {
     void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow);
@@ -13,6 +14,21 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
 
     public GameObject representation;
     public GameObject[] creationArrows;
+
+
+    public void CallValidator()
+    {
+        Validator Sculpture = new Validator();
+
+        GameObject cube;
+        GameObject[] cubes;
+
+        cube = GameObject.FindGameObjectWithTag("OriginCube");
+        cubes = GameObject.FindGameObjectsWithTag("Cube");
+        Sculpture.SetOrigin(cube);
+        Sculpture.ConvertList(cubes);
+        Sculpture.Start();
+    }
 
     public void DidSelect(ClickSelectable selectable) {
         if (manager == null) {
@@ -37,11 +53,13 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         if (selectable == representation.GetComponent<ClickSelectable>())
         {
             manager.DestroyUnit(gameObject);
+            CallValidator();
         }
         else
         {
             GameObject selected = selectable.gameObject;
             manager.DestroyUnit(selected);
+            CallValidator();
         }
     }
 
