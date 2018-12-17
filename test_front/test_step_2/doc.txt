@@ -1,0 +1,1 @@
+aici vor fi testele pentru partea a doua a aplicatiei pe front (atunci cand backend ul intoarce o structura in format json)

@@ -1,0 +1,1 @@
+aici vor fi testele pentru prima parte din aplicatie, care se face pe front (explicit creare de figuri/forme)
