@@ -8,6 +8,6 @@ namespace InputOutputManager
     [Serializable]
     class CubeCollection
     {
-        public List<Cube> cubes;
+        public List<Cube> cubes = new List<Cube>();
     }
 }

@@ -10,16 +10,19 @@ public interface ISelectableDelegate {
 
 public class ClickSelectable : MonoBehaviour {
     public ISelectableDelegate selectableDelegate;
+
+    public bool rightClickable;
+    public bool leftClickable;
 	
-    public void select() {
-        if (selectableDelegate != null) {
+    public void leftClickSelect() {
+        if (selectableDelegate != null && leftClickable) {
             selectableDelegate.DidSelect(this);
         }
     }
 
-    public void leftSelect()
+    public void rightClickSelect()
     {
-        if (selectableDelegate != null)
+        if (selectableDelegate != null && rightClickable)
         {
             selectableDelegate.LeftSelect(this);
         }
