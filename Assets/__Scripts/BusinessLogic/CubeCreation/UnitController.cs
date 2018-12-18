@@ -40,6 +40,7 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         } else {
             GameObject selected = selectable.gameObject;
             manager.DidSelectUnitAndArrow(this, selected);
+            CallValidator();
         }
     }
 
@@ -52,14 +53,14 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         }
         if (selectable == representation.GetComponent<ClickSelectable>())
         {
-            manager.DestroyUnit(gameObject);
             CallValidator();
+            manager.DestroyUnit(gameObject);
         }
         else
         {
             GameObject selected = selectable.gameObject;
-            manager.DestroyUnit(selected);
             CallValidator();
+            manager.DestroyUnit(selected);
         }
     }
 

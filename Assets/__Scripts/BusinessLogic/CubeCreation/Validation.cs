@@ -34,6 +34,7 @@ namespace Validation
             //First we need to see neighbours right near origin
             List<GameObject> CheckedCubes = new List<GameObject>();
             CheckedCubes.Add(OriginCube);
+            OriginCube.GetComponent<Renderer>().material.color = Color.green;
             foreach (GameObject cube in AllCubes)
             {
                 Renderer Origin, CubeToCheck;
