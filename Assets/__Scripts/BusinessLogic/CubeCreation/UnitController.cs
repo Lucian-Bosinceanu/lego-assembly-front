@@ -15,21 +15,6 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
     public GameObject representation;
     public GameObject[] creationArrows;
 
-
-    public void CallValidator()
-    {
-        Validator Sculpture = new Validator();
-
-        GameObject cube;
-        GameObject[] cubes;
-
-        cube = GameObject.FindGameObjectWithTag("OriginCube");
-        cubes = GameObject.FindGameObjectsWithTag("Cube");
-        Sculpture.SetOrigin(cube);
-        Sculpture.ConvertList(cubes);
-        Sculpture.Start();
-    }
-
     public void DidSelect(ClickSelectable selectable) {
         if (manager == null) {
             print("MANAGER IS NULL");
@@ -40,7 +25,6 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         } else {
             GameObject selected = selectable.gameObject;
             manager.DidSelectUnitAndArrow(this, selected);
-            CallValidator();
         }
     }
 
@@ -53,13 +37,11 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         }
         if (selectable == representation.GetComponent<ClickSelectable>())
         {
-            CallValidator();
             manager.DestroyUnit(gameObject);
         }
         else
         {
             GameObject selected = selectable.gameObject;
-            CallValidator();
             manager.DestroyUnit(selected);
         }
     }

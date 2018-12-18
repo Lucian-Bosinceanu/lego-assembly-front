@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Validation;
 using UnityEngine.UI;
 
 public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
@@ -13,6 +14,19 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     public ArrayList units;
 
     public bool IsFirstCube;
+
+    public void CallValidator() {
+        Validator Sculpture = new Validator();
+
+        GameObject cube;
+        GameObject[] cubes;
+
+        cube = GameObject.FindGameObjectWithTag("OriginCube");
+        cubes = GameObject.FindGameObjectsWithTag("Cube");
+        Sculpture.SetOrigin(cube);
+        Sculpture.ConvertList(cubes);
+        Sculpture.Start();
+    }
 
     public void FocusUnit(UnitController unit) {
         if (current != null) {
@@ -60,6 +74,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         newUnit.GetComponent<UnitController>().manager = this;
         units.Add(newUnit);
         UnitCounter.count++;
+        CallValidator();
     }
 
     public void DestroyUnit(GameObject selected)
@@ -67,6 +82,8 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         units.Remove(selected);
         UnitCounter.count--;
         Destroy(selected);
+        selected.GetComponent<UnitController>().representation.tag = "Untagged";
+        CallValidator();
     }
 
 }
