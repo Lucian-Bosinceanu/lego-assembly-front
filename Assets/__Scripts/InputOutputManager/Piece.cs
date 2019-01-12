@@ -7,9 +7,9 @@ using UnityEngine;
 namespace InputOutputManager
 {
     [Serializable]
-    class Piece
+    public class Piece
     {
         public String name;
-        public Vector3 structure;
+        public List<Vector3> structure;
     }
 }

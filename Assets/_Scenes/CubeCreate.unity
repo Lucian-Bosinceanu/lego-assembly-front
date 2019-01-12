@@ -1325,9 +1325,9 @@ GameObject:
   m_Component:
   - component: {fileID: 369821330}
   - component: {fileID: 369821333}
-  - component: {fileID: 369821334}
   - component: {fileID: 369821332}
   - component: {fileID: 369821331}
+  - component: {fileID: 369821334}
   m_Layer: 5
   m_Name: BrowseFilesButton
   m_TagString: Untagged
@@ -1392,7 +1392,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 369821332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369821334}
+        m_MethodName: OpenExplorer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &369821332
@@ -1436,9 +1447,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 369821329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3564ec419dd97c349b9580d3e11ea065, type: 3}
+  m_Script: {fileID: 11500000, guid: 40d7f5ad80917ff42b0061041290d1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputCollection:
+    pieces: []
+    order: []
+  pathToJson: {fileID: 923747637}
 --- !u!1 &414807116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Path
+  m_Text: File
 --- !u!222 &720794855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5908,9 +5923,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2133086493}
   - component: {fileID: 2133086496}
-  - component: {fileID: 2133086497}
   - component: {fileID: 2133086495}
   - component: {fileID: 2133086494}
+  - component: {fileID: 2133086497}
   m_Layer: 5
   m_Name: ImportJsonButton
   m_TagString: Untagged
@@ -5975,7 +5990,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2133086495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2133086497}
+        m_MethodName: loadInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2133086495
@@ -6019,6 +6045,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133086492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3564ec419dd97c349b9580d3e11ea065, type: 3}
+  m_Script: {fileID: 11500000, guid: 40d7f5ad80917ff42b0061041290d1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputCollection:
+    pieces: []
+    order: []
+  pathToJson: {fileID: 923747637}
