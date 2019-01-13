@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/CubeCreate.unity
     guid: ff499830001e2b543b85241fc4ccddf1
+  - enabled: 1
+    path: Assets/_Scenes/SolutionPresentation.unity
+    guid: a3268ff685fd4a04aa40ce1ba73582ee

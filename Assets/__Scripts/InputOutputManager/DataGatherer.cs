@@ -28,10 +28,6 @@ public class DataGatherer : MonoBehaviour
 
         //prepare back-end
         //daca rulezi din unity foloseste "/../../lego-assembly-back/main.py"
-        string pyPath = "../lego-assembly-back/main.py";
-        #if UNITY_EDITOR
-            pyPath = "/../../lego-assembly-back/main.py";
-        #endif
         string progToRun = Application.dataPath + "/../../lego-assembly-back/main.py";
         Process proc = new Process();
         proc.StartInfo.FileName = "python.exe";
@@ -42,11 +38,7 @@ public class DataGatherer : MonoBehaviour
 
         //import json
         //daca rulezi din unity foloseste "/../../lego-assembly-back/JsonOutput.json"
-        string jsonPath = "../lego-assembly-back/JsonOutput.json";
-        #if UNITY_EDITOR
-            jsonPath = "/../../lego-assembly-back/JsonOutput.json";
-        #endif
-        string contents = File.ReadAllText(Application.dataPath + path);
+        string contents = File.ReadAllText(Application.dataPath + "/../../lego-assembly-back/JsonOutput.json");
         importJsonButton.GetComponent<InputLoader>().inputCollection = JsonUtility.FromJson<InputCollection>(contents);
 
     }
