@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace InputOutputManager
 {
@@ -17,7 +19,9 @@ namespace InputOutputManager
 
         public void OpenExplorer()
         {
+#if UNITY_EDITOR
             pathToJson.text = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
+#endif
         }
 
         public void loadInput()
