@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using Validation;
 using UnityEngine.UI;
 
-public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
+public class UnitManager : MonoBehaviour, IUnitManagerDelegate
+{
     public GameObject UnitPrefab;
     public GameObject SculptureAnchor;
 
@@ -15,7 +18,8 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
 
     public bool IsFirstCube;
 
-    public void CallValidator() {
+    public void CallValidator()
+    {
         Validator Sculpture = new Validator();
 
         GameObject cube;
@@ -28,21 +32,26 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
         Sculpture.Start();
     }
 
-    public void FocusUnit(UnitController unit) {
-        if (current != null) {
+    public void FocusUnit(UnitController unit)
+    {
+        if (current != null)
+        {
             current.HideArrows();
         }
         current = unit;
         unit.ShowArrows();
     }
 
-    public void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow) {
+    public void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow)
+    {
         Vector3 distance = (unit.representation.transform.position - creationArrow.transform.position) * 2;
         Vector3 newUnitPosition = unit.transform.position - distance;
         if (UnitCounter.count == UnitCounter.MAX_NUMBER_OF_CUBES)
         {
+#if UNITY_EDITOR
             EditorUtility.DisplayDialog("Cube limit reached", "Cannot add more cubes! " +
                 "The maximum number of cubes permitted is 5000.", "Ok");
+#endif
         }
         else
         {
@@ -51,14 +60,16 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         units = new ArrayList();
         IsFirstCube = true;
         CreateUnit(Vector3.zero);
-	}
-	
-	
-    void CreateUnit(Vector3 position) {
+    }
+
+
+    void CreateUnit(Vector3 position)
+    {
         GameObject newUnit = Instantiate(UnitPrefab, SculptureAnchor.transform, true);
         newUnit.transform.position = position;
         newUnit.SetActive(true);

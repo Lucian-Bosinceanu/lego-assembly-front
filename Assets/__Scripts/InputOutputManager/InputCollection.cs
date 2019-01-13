@@ -6,7 +6,7 @@ using System.Text;
 namespace InputOutputManager
 {
     [Serializable]
-    class InputCollection
+    public class InputCollection
     {
         public List <Piece> pieces;
         public List <OrderElement> order;

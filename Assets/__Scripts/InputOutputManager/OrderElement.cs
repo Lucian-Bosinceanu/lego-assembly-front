@@ -7,7 +7,7 @@ using UnityEngine;
 namespace InputOutputManager
 {
     [Serializable]
-    class OrderElement
+    public class OrderElement
     {
         public String   name;
         public Vector3  position;

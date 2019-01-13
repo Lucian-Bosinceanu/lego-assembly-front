@@ -4,22 +4,30 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace InputOutputManager
 {
-    class InputLoader
+    public class InputLoader : MonoBehaviour
     {
-        private String filePath;
+        public InputCollection inputCollection;
 
-        public InputLoader(String filePath)
+        public InputField pathToJson;
+
+        public void OpenExplorer()
         {
-            this.filePath = filePath;
+#if UNITY_EDITOR
+            pathToJson.text = EditorUtility.OpenFilePanel("Overwrite with json", "", "json");
+#endif
         }
 
-        public InputCollection loadInput()
+        public void loadInput()
         {
-            string contents = File.ReadAllText(filePath);
-            return JsonUtility.FromJson<InputCollection>(contents);
+            string contents = File.ReadAllText(pathToJson.text);
+            this.inputCollection = JsonUtility.FromJson<InputCollection>(contents);
         }
     }
 }
