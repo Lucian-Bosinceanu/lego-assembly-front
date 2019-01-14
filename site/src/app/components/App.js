@@ -11,7 +11,7 @@ export class App extends React.Component {
       <Grid 
         container
         justify="center" 
-        spacing={8}
+        spacing={0}
       >
 
         <Grid item xs={12}>
