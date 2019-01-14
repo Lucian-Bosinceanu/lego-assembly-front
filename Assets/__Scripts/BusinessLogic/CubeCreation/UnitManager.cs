@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 using Validation;
 using UnityEngine.UI;
+using System;
+using System.Text;
 
 public class UnitManager : MonoBehaviour, IUnitManagerDelegate
 {
@@ -17,6 +17,8 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate
     public ArrayList units;
 
     public bool IsFirstCube;
+    public InputField numberOfCubes;
+
 
     public void CallValidator()
     {
@@ -46,16 +48,25 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate
     {
         Vector3 distance = (unit.representation.transform.position - creationArrow.transform.position) * 2;
         Vector3 newUnitPosition = unit.transform.position - distance;
-        if (UnitCounter.count == UnitCounter.MAX_NUMBER_OF_CUBES)
+
+        int number;
+        if (Int32.TryParse(numberOfCubes.text, out number))
         {
-#if UNITY_EDITOR
-            EditorUtility.DisplayDialog("Cube limit reached", "Cannot add more cubes! " +
-                "The maximum number of cubes permitted is 5000.", "Ok");
-#endif
-        }
-        else
+            while (number != 0)
+            {
+                CreateUnit(newUnitPosition);
+                newUnitPosition -= distance;
+                number--;
+
+                if (UnitCounter.count == UnitCounter.MAX_NUMBER_OF_CUBES)
+                {
+                    EditorUtility.DisplayDialog("Cube limit reached", "Cannot add more cubes! " +
+                        "The maximum number of cubes permitted is " + UnitCounter.MAX_NUMBER_OF_CUBES, "Ok");
+                }
+            }
+        } else
         {
-            CreateUnit(newUnitPosition);
+            EditorUtility.DisplayDialog("Wrong input type", "Please input a number!", "Ok, sorry");
         }
     }
 
@@ -65,6 +76,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate
         units = new ArrayList();
         IsFirstCube = true;
         CreateUnit(Vector3.zero);
+        numberOfCubes.text = "1";
     }
 
 
@@ -98,3 +110,12 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate
     }
 
 }
+
+
+
+
+
+
+
+
+
