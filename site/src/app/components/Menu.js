@@ -3,9 +3,8 @@ import Button from '@material-ui/core/Button';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { Link } from 'react-router-dom'
-import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
 import Grid from "@material-ui/core/Grid";
+import logo from '../../media/logo.png'
 
 export class Menu extends React.Component {
   render() {
@@ -15,7 +14,7 @@ export class Menu extends React.Component {
         > 
             <Toolbar>
                 <div id="logo-image">
-                    <img src="../../src/media/logo.png"/>
+                    <img alt="" src={logo}/>
                 </div>
                 
                 <Grid

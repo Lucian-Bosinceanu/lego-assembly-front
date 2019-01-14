@@ -2,6 +2,7 @@ import React from "react";
 import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import { CardContent, CardMedia } from "@material-ui/core";
+import groupImage from '../../media/grupa_B1.jpg'
 
 export class AboutUsPage extends React.Component {
   render() {
@@ -21,7 +22,7 @@ export class AboutUsPage extends React.Component {
           <Typography component="p" align="justify">
             Frumoși, talentați și cu programul mereu încărcat, ne place să muncim și să ne trăim viața din plin! Iubim să facem glumițe și să râdem. Avem o singură fată în grupă -
 Monica - cu care ne mândrim și de care avem grijă! <br/><br/>
-            Puteți intra în contact cu noi accesând grupul nostru de <a target="_blank" href="https://www.facebook.com/groups/178670812574248/">Facebook</a> sau prin intermediul administratorului acestui proiect la adresa <b>lucian.a.bosinceanu@gmail.com</b>.
+            Puteți intra în contact cu noi accesând grupul nostru de <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/groups/178670812574248/">Facebook</a> sau prin intermediul administratorului acestui proiect la adresa <b>lucian.a.bosinceanu@gmail.com</b>.
           </Typography> 
         </Paper>
 
@@ -32,7 +33,7 @@ Monica - cu care ne mândrim și de care avem grijă! <br/><br/>
         
           <CardContent>
             <CardMedia
-              image="../../src/media/grupa_B1.jpg"
+              image={groupImage}
               title="grupa B1"
               id={"group-image"}
             />

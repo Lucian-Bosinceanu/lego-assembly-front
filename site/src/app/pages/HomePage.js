@@ -32,9 +32,9 @@ export class HomePage extends React.Component {
           </Typography>
         
           <Typography component="p" align="justify">
-            <a target="_blank" href="https://github.com/Lucian-Bosinceanu/lego-assembly-front">Front-end Github repository</a> <br/><br/>
-            <a target="_blank" href="https://github.com/Lucian-Bosinceanu/lego-assembly-back">Back-end Github repository</a>  <br/><br/>
-            <a target="_blank" href="https://tinyurl.com/ydxjhxxg">Fișa proiectului</a> <br/><br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lucian-Bosinceanu/lego-assembly-front">Front-end Github repository</a> <br/><br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lucian-Bosinceanu/lego-assembly-back">Back-end Github repository</a>  <br/><br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/ydxjhxxg">Fișa proiectului</a> <br/><br/>
           </Typography> 
 
         </Paper>

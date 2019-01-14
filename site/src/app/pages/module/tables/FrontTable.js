@@ -1,5 +1,4 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper"
 import Table from "@material-ui/core/Table"
 import { TableRow, TableHead, TableBody, TableCell } from "@material-ui/core";
 import { withStyles } from '@material-ui/core/styles';
