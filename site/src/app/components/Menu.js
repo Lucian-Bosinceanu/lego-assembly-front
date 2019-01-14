@@ -14,7 +14,9 @@ export class Menu extends React.Component {
         > 
             <Toolbar>
                 <div id="logo-image">
+                <Link to='/'>
                     <img alt="" src={logo}/>
+                </Link>
                 </div>
                 
                 <Grid
