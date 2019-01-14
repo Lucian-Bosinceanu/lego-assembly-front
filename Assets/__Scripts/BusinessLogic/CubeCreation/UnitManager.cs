@@ -61,7 +61,7 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate
                 if (UnitCounter.count == UnitCounter.MAX_NUMBER_OF_CUBES)
                 {
                     EditorUtility.DisplayDialog("Cube limit reached", "Cannot add more cubes! " +
-                        "The maximum number of cubes permitted is 5000.", "Ok");
+                        "The maximum number of cubes permitted is " + UnitCounter.MAX_NUMBER_OF_CUBES, "Ok");
                 }
             }
         } else
