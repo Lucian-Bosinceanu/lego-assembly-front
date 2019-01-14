@@ -26,11 +26,11 @@ export class BackTable extends React.Component {
 
     componentDidMount() {
         const data = [
-            this.createData("Validarea input-ului", "", "Feciuc Stelian & Bojescu Mihai (lider echipă)"),
-            this.createData("Gestionarea Input-Ouput", "", "Băcăoanu Camelia & Amariei Oana (B4)"),
-            this.createData("Îmbinarea cuburilor", "", "Cojocaru Dragoș & Tîrpescu Andrei"),
-            this.createData("Construcția grafului", "", "Crivoi Andrei"),
-            this.createData("Validarea grafului", "", "Cășuneanu Andrei & Timofte Andrei"),
+            this.createData("Gestionarea Input-Ouput", "Se ocupă cu importarea modelelor 3D și cu exportarea sculpturilor lego în format json rezultate în urma prelucrării modelelor.", "Băcăoanu Camelia & Amariei Oana (B4)"),
+            this.createData("Validarea input-ului", "Are ca scop validarea faptului că fișierul json primit ca input respectă specificațiile unui model 3D rezultat în urma exportării acestuia de pe front.", "Feciuc Stelian & Bojescu Mihai (lider echipă)"),
+            this.createData("Îmbinarea cuburilor", "Algoritm care are ca scop îmbinarea cuburilor modelului 3D cu scopul de a obține piese lego cu dimensiuni specificate apriori.", "Cojocaru Dragoș & Tîrpescu Andrei"),
+            this.createData("Construcția grafului", "Pe baza structurii de piese lego rezultate în urma îmbinării, se construiește un graf în care nodurile sunt piese, iar muchiile sunt conexiunile dintre ele.", "Crivoi Andrei"),
+            this.createData("Validarea grafului", "Se testează ca graful să nu aibă vulnerabilități structurale cu scopul validării întregii construcții.", "Cășuneanu Andrei & Timofte Andrei"),
         ]
 
         this.setState({
@@ -48,7 +48,7 @@ export class BackTable extends React.Component {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <CustomTableCell>Nume</CustomTableCell>
+                        <CustomTableCell>Nume submodul</CustomTableCell>
                         <CustomTableCell>Scurtă descriere</CustomTableCell>
                         <CustomTableCell>Membri</CustomTableCell>
                     </TableRow>

@@ -66,7 +66,9 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
           </Typography>
         
           <Typography component="p" align="justify">
-            Programul necesită ca input un model 3D partiționat în multiple straturi, fiecare fiind împărțit într-o grilă dreptunghiulară. Fiecare pătrat din această grilă ori va fi umplut cu un cub Lego, fie lăsat gol, iar anumite pătrate pot fi alipite pentru a crea cărămizi mai complexe.
+            De administrarea proiectului s-a ocupat Bosînceanu Lucian-Andrei și a presupus proiectarea modului de funcționare al aplicației, împărțirea pe module, crearea
+  repertoriilor pe Github, facilitarea comunicării dintre membri prin realizarea de grupuri de chat pe Facebook si Discord, precum și pregătirea tablelor Kanban
+  pe Meistertask și discuții de clarificare a sarcinilor de lucru. În plus, munca de administrare a presupus și realizarea acestui website.
           </Typography> 
         </Paper>
       </div>

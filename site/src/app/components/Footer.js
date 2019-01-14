@@ -1,12 +1,21 @@
 import React from "react";
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import Icon from '@material-ui/core/Icon';
 
 export class Footer extends React.Component {
-  render() {
+  
+    constructor(props) {
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event, newValue) {
+        window.open(newValue);
+    }
+    
+    render() {
     return (
         <footer>
             <BottomNavigation
@@ -14,11 +23,9 @@ export class Footer extends React.Component {
                 onChange={this.handleChange}
                 showLabels
             >
-                <BottomNavigationAction label="Facebook" to="https://github.com/Lucian-Bosinceanu/lego-assembly-back" icon={<RestoreIcon />} />
-                <BottomNavigationAction label="Youtube" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Front repo" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Back repo" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="Google" icon={<LocationOnIcon />} />
+                <BottomNavigationAction value="https://github.com/Lucian-Bosinceanu/lego-assembly-front" label="Front repo" icon={<Icon>web</Icon>} />
+                <BottomNavigationAction value="https://github.com/Lucian-Bosinceanu/lego-assembly-back" label="Back repo" icon={<Icon>web</Icon>} />
+                <BottomNavigationAction value="https://tinyurl.com/ydxjhxxg" label="Fișa proiect" icon={<Icon>web</Icon>} />
             </BottomNavigation>
       </footer>
     );

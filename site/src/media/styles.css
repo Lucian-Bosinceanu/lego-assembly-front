@@ -11,6 +11,8 @@ html {
   font-size: 18px;
 }
 
+
+
 footer {
   margin-top:calc(5% + 60px);
   bottom: 0;
@@ -20,7 +22,7 @@ footer {
   padding-top: 35px;
 }
 
-.content *{
+.content > *{
   padding: 20px;
 }
 
@@ -33,5 +35,16 @@ footer {
 }
 
 #group-image{
-  height: 500px;
+  height: 550px;
+}
+
+#logo-image img{
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p a, p b{
+  margin: 0;
+  padding: 0;
 }

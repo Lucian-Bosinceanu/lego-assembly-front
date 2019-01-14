@@ -26,10 +26,10 @@ export class TestTable extends React.Component {
 
     componentDidMount() {
         const data = [
-            this.createData("", "", "Apușcășiței Silviu (lider echipă)"),
-            this.createData("", "", "Anton Cătălin"),
-            this.createData("", "", "Dima Ionuț"),
-            this.createData("", "", "Tincu Gabriel"),
+            this.createData("Testare negativă", "Testarea și alcătuirea de rapoarte pentru scenarii negative, atât pe componente, cât și pe integrări.", "Apușcășiței Silviu (lider echipă)"),
+            this.createData("Testare de performanță", "Idem, dar pentru testarea performanței aplicației.", "Anton Cătălin"),
+            this.createData("Testare pozitivă", "Idem, dar pentru scenarii pozitive.", "Dima Ionuț"),
+            this.createData("Testare de complexitate", "Idem, dar pentru scenarii cu situații complexe.", "Tincu Gabriel"),
         ]
 
         this.setState({
@@ -47,7 +47,7 @@ export class TestTable extends React.Component {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <CustomTableCell>Nume</CustomTableCell>
+                        <CustomTableCell>Nume submodul</CustomTableCell>
                         <CustomTableCell>Scurtă descriere</CustomTableCell>
                         <CustomTableCell>Membri</CustomTableCell>
                     </TableRow>

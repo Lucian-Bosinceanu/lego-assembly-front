@@ -28,12 +28,15 @@ export class HomePage extends React.Component {
 
         <Paper className={"content"}>
           <Typography variant = "h4" color="inherit" component="h4">
-            Link-uri utile
+            Legături utile
           </Typography>
         
           <Typography component="p" align="justify">
-            Github front si back, Youtube, Facebook
+            <a target="_blank" href="https://github.com/Lucian-Bosinceanu/lego-assembly-front">Front-end Github repository</a> <br/><br/>
+            <a target="_blank" href="https://github.com/Lucian-Bosinceanu/lego-assembly-back">Back-end Github repository</a>  <br/><br/>
+            <a target="_blank" href="https://tinyurl.com/ydxjhxxg">Fișa proiectului</a> <br/><br/>
           </Typography> 
+
         </Paper>
       </div>
     );

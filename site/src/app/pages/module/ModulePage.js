@@ -12,7 +12,7 @@ export class ModulePage extends React.Component {
       <div className="content-papers">
         <Paper className={"content"}>
           <Typography variant = "h3" color="inherit" component="h3">
-            Împărțirea pe module
+            Distribuția inițială a membrilor pe submodule
           </Typography>
         </Paper>
 

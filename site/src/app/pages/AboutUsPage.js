@@ -9,7 +9,7 @@ export class AboutUsPage extends React.Component {
       <div className="content-papers">
         <Paper className={"content"}>
           <Typography variant = "h3" color="inherit" component="h3">
-            Despre noi - grupa B1
+            Despre noi - grupa B1 FII
           </Typography>
         </Paper>
 
@@ -19,7 +19,9 @@ export class AboutUsPage extends React.Component {
           </Typography>
 
           <Typography component="p" align="justify">
-            Programul necesită ca input un model 3D partiționat în multiple straturi, fiecare fiind împărțit într-o grilă dreptunghiulară. Fiecare pătrat din această grilă ori va fi umplut cu un cub Lego, fie lăsat gol, iar anumite pătrate pot fi alipite pentru a crea cărămizi mai complexe.
+            Frumoși, talentați și cu programul mereu încărcat, ne place să muncim și să ne trăim viața din plin! Iubim să facem glumițe și să râdem. Avem o singură fată în grupă -
+Monica - cu care ne mândrim și de care avem grijă! <br/><br/>
+            Puteți intra în contact cu noi accesând grupul nostru de <a target="_blank" href="https://www.facebook.com/groups/178670812574248/">Facebook</a> sau prin intermediul administratorului acestui proiect la adresa <b>lucian.a.bosinceanu@gmail.com</b>.
           </Typography> 
         </Paper>
 

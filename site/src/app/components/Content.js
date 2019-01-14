@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom"
 
 import {HomePage} from "../pages/HomePage"
-import { EvolutionPage } from "../pages/EvolutionPage";
+import { EvolutionPage } from "../pages/evolution/EvolutionPage";
 import { ModulePage } from "../pages/module/ModulePage";
 import { AboutUsPage } from "../pages/AboutUsPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
