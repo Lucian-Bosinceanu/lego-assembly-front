@@ -43,7 +43,7 @@ public class animatiePrezentare : MonoBehaviour
     IEnumerator asd()
     {
         inputCollection = importButton.GetComponent<InputLoader>().inputCollection;
-        for (i = 1; i <= 5000; i++)
+        for (i = 0; i <= 5000; i++)
         {
         Debug.Log("wait_on");
         yield return new WaitForSeconds(speed);
