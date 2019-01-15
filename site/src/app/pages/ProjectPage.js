@@ -14,16 +14,6 @@ export class ProjectPage extends React.Component {
 
         <Paper className={"content"}>
           <Typography variant = "h4" color="inherit" component="h4">
-            Privire de ansamblu
-          </Typography>
-
-          <Typography component="p" align="justify">
-            Proiectul “Lego assemblings” are ca scop optimizarea structurilor topologice și generarea automată de sculpturi realizate din cărămizi Lego. Acest lucru va fi realizat cu ajutorul algoritmilor genetici, codificând graful ce urmează a fi asamblat drept un cromozom. Urmărind pașii de inițializare, mutație și încrucișare, vom putea folosi o funcție de evaluare pentru a estima fitnessul structurii obținute.
-          </Typography> 
-        </Paper>
-
-        <Paper className={"content"}>
-          <Typography variant = "h4" color="inherit" component="h4">
             Front-end
           </Typography>
         
@@ -46,7 +36,19 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
           </Typography>
         
           <Typography component="p" align="justify">
-            Programul necesită ca input un model 3D partiționat în multiple straturi, fiecare fiind împărțit într-o grilă dreptunghiulară. Fiecare pătrat din această grilă ori va fi umplut cu un cub Lego, fie lăsat gol, iar anumite pătrate pot fi alipite pentru a crea cărămizi mai complexe.
+            Componenta de backend a proiectului Lego Assembly este componenta unde se realizează asamblarea pieselor, optimizarea lor și verificarea integrității și resprectiv a rezistenței structurii date de utilizator. În cadrul acestei componente, am ales să folosim o abordare cât se poate de modulară. Backendul oferă utilizatorului doi algoritmi de asamblare: unul determinist (greedy), altul nedeterminist (folosind algoritmi genetici).
+          </Typography>
+
+          <Typography component="p" align="justify">
+            Programul necesită ca input un model 3D partiționat în multiple straturi, fiecare fiind împărțit într-o grilă dreptunghiulară. Fiecare pătrat din această grilă ori va fi umplut cu un cub Lego, fie lăsat gol, iar anumite pătrate pot fi alipite pentru a crea cărămizi mai complexe. În urma aplicăriii algoritmului de îmbinare a cuburilor
+  (fie în variantă deterministă greedy, fie nedetermist în stil genetic) rezultă o structură de date reprezentată prin intermediul unui graf. Acesta este apoi validat din
+  punct de vedere structural, asigurându-ne că este conex și că fiecare nod nu prezintă vulnerabilități (adică ar putea fi eliminat din graf fără ca acesta să își piardă
+  conexitatea). Dacă în urma aceste validări se obține o structură stabilă, atunci întregul algoritm de îmbinare se oprește și se prelucrează graful cu scopul de a obține
+  un fișier json care descrie structura lego rezultată.
+          </Typography> 
+
+          <Typography component="p" align="justify">
+            Mai multe detalii despre implementare pot fi consultate <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1lvSpbeV6_kL1B4AEgvQXipJgMAhBDqdsoECw1Dg0nNY/edit?usp=sharing">aici</a>.
           </Typography> 
         </Paper>
 
