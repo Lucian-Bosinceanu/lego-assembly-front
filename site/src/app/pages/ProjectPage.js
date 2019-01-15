@@ -18,6 +18,11 @@ export class ProjectPage extends React.Component {
           </Typography>
         
           <Typography component="p" align="justify">
+            A fost realizat în Unity și este un editor care permite realizarea de modele 3D din cubulețe. În plus, permite vizualizarea construcției sculpturii rezultate  în
+urma aplicării algoritmului de pe back-end.
+          </Typography> 
+
+          <Typography component="p" align="justify">
           Workflow general al aplicației front-end:
 Lansăm aplicația. În mijloc se află un plan 3D pe care este plasat un cub. Acela este cubul origine.
 Apăsăm click-stânga pe cubul origine. 5 săgeți vor ieși atunci din el, una pe fiecare latură, arătând posibilele direcții de extindere. Din meniul de sus putem schimba culoarea cubului selectat.
@@ -27,7 +32,7 @@ Selectăm un cub apăsând click-stânga. Dacă apăsăm click-dreapta, acesta v
 La final, apăsăm butonul Exportă din meniul ”File...”. Dacă arhitectura modelului este deficitară (nu există drum de la cubul inițial la toate celelalte cuburi), exportul nu va funcționa și toate cuburile cu probleme vor fi marcate. Altfel, se va genera un fișier text care descrie modelul 3D.
 După ce obținem un fișier cu sculptura Lego de la aplicația back-end, acesta va putea fi importat în front-end prin apăsarea butonului Import din meniul ”File...”.
 Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfață care permite vizualizarea algoritmului de construcție prin intermediul unei animații controlabile de un controller cu butoane specifice (menționate anterior). 
-</Typography> 
+          </Typography> 
         </Paper>
 
         <Paper className={"content"}>
@@ -36,7 +41,7 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
           </Typography>
         
           <Typography component="p" align="justify">
-            Componenta de backend a proiectului Lego Assembly este componenta unde se realizează asamblarea pieselor, optimizarea lor și verificarea integrității și resprectiv a rezistenței structurii date de utilizator. În cadrul acestei componente, am ales să folosim o abordare cât se poate de modulară. Backendul oferă utilizatorului doi algoritmi de asamblare: unul determinist (greedy), altul nedeterminist (folosind algoritmi genetici).
+            Componenta de backend a proiectului Lego Assembly a fost realizată în Python și este componenta unde se realizează asamblarea pieselor, optimizarea lor și verificarea integrității și resprectiv a rezistenței structurii date de utilizator. În cadrul acestei componente, am ales să folosim o abordare cât se poate de modulară. Backendul oferă utilizatorului doi algoritmi de asamblare: unul determinist (greedy), altul nedeterminist (folosind algoritmi genetici).
           </Typography>
 
           <Typography component="p" align="justify">
