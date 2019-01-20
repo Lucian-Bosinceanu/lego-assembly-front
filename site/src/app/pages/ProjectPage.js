@@ -69,6 +69,10 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
           <Typography component="p" align="justify">
             Se va realiza, în mare parte, manual. În cadrul testării vom merge după un test plan. Vom crea scenarii de utilizare și câteva mockup-uri pe care le vom folosi în momentul în care aplicația va fi funcțională. Aceste date de intrare fie se vor realiza manual, fie utilizând aplicația front-end, fie le vom realiza în Use Cubes până când aceasta va fi gata, astfel întocmind un model pentru user de a crea o componentă. Ne vom interesa cum se crează acele forme și vom încerca să realizăm forme cât mai diferite și mai diverse pentru a avea un coverage cât mai mare de testare al aplicației. De asemenea, vom include și testare automată, și manuală pe parcursul proiectului. Se vor scrie unit teste la nivel de back-end.
           </Typography> 
+
+          <Typography component="p" align="justify">
+            Informații mai detaliate pot fi accesate de <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1A0Ti1eXt3QSCbgCxKYxss9wlRSkxZksDR1ondyvdw0c/edit?usp=sharing">aici</a>.
+          </Typography> 
         </Paper>
 
         <Paper className={"content"}>
@@ -82,9 +86,6 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
   pe Meistertask și discuții de clarificare a sarcinilor de lucru. În plus, munca de administrare a presupus și realizarea acestui website.
           </Typography> 
 
-          <Typography component="p" align="justify">
-            Informații mai detaliate pot fi accesate de <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1A0Ti1eXt3QSCbgCxKYxss9wlRSkxZksDR1ondyvdw0c/edit?usp=sharing">aici</a>.
-          </Typography> 
         </Paper>
       </div>
     );
