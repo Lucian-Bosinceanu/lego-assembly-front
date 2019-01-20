@@ -33,6 +33,10 @@ La final, apăsăm butonul Exportă din meniul ”File...”. Dacă arhitectura 
 După ce obținem un fișier cu sculptura Lego de la aplicația back-end, acesta va putea fi importat în front-end prin apăsarea butonului Import din meniul ”File...”.
 Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfață care permite vizualizarea algoritmului de construcție prin intermediul unei animații controlabile de un controller cu butoane specifice (menționate anterior). 
           </Typography> 
+
+          <Typography component="p" align="justify">
+            Documentația acestui modul poate fi studiată <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1x3vDRiV3cHJxdFpaneOJhy8xnuL_6-MMlpO9ytEMIRs/edit?usp=sharing">aici</a>.
+          </Typography> 
         </Paper>
 
         <Paper className={"content"}>
@@ -76,6 +80,10 @@ Odată încarcată o sculptură Lego, editorul 3D va fi înlocuit de o interfaț
             De administrarea proiectului s-a ocupat Bosînceanu Lucian-Andrei și a presupus proiectarea modului de funcționare al aplicației, împărțirea pe module, crearea
   repertoriilor pe Github, facilitarea comunicării dintre membri prin realizarea de grupuri de chat pe Facebook si Discord, precum și pregătirea tablelor Kanban
   pe Meistertask și discuții de clarificare a sarcinilor de lucru. În plus, munca de administrare a presupus și realizarea acestui website.
+          </Typography> 
+
+          <Typography component="p" align="justify">
+            Informații mai detaliate pot fi accesate de <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1A0Ti1eXt3QSCbgCxKYxss9wlRSkxZksDR1ondyvdw0c/edit?usp=sharing">aici</a>.
           </Typography> 
         </Paper>
       </div>
